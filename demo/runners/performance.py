@@ -182,7 +182,7 @@ class FaberAgent(BaseAgent):
         schema_body = {
             "schema_name": "degree schema",
             "schema_version": version,
-            "attributes": ["name", "date", "degree", "age"],
+            "attributes": ["nombre", "date", "degree", "age"],
         }
         schema_response = await self.admin_POST("/schemas", schema_body)
         self.schema_id = schema_response["sent"]["schema_id"]
