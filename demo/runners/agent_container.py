@@ -809,7 +809,7 @@ async def test_main(
         await faber_container.initialize(
             schema_name="degree schema",
             schema_attrs=[
-                "name",
+                "nombre",
                 "date",
                 "degree",
                 "grade",
