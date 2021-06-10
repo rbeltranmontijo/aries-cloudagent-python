@@ -167,6 +167,7 @@ async def main(args):
         faber_agent.public_did = True
         faber_schema_name = "degree schema"
         faber_schema_attrs = ["nombre", "fechaNacimiento", "degree", "edad", "timestamp"]
+        
         await faber_agent.initialize(
             the_agent=agent,
             schema_name=faber_schema_name,
@@ -239,7 +240,7 @@ async def main(args):
 
                 # TODO define attributes to send for credential
                 faber_agent.agent.cred_attrs[faber_agent.cred_def_id] = {
-                    "name": "Alice Smith",
+                    "nombre": "Alice Smith",
                     "date": "2018-05-28",
                     "degree": "Maths",
                     "age": "24",
@@ -272,7 +273,7 @@ async def main(args):
                 log_status("#20 Request proof of degree from alice")
                 req_attrs = [
                     {
-                        "name": "name",
+                        "name": "nombre",
                         "restrictions": [{"schema_name": faber_schema_name}],
                     },
                     {
